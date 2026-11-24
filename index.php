@@ -90,8 +90,8 @@ function e($texto): string
                     <h1 class="display">Tu negocio, claro y completo en una sola página.</h1>
 
                     <p class="lead">
-                        Diseñamos, escribimos y publicamos tu sitio web. Tú solo nos cuentas
-                        qué haces; en 7 días está en línea.
+                        Diseñamos, escribimos y publicamos tu sitio web a medida. Tú solo
+                        nos cuentas qué haces; en 4 días está en línea.
                     </p>
 
                     <div class="hero__actions">
@@ -100,9 +100,9 @@ function e($texto): string
                     </div>
 
                     <div class="hero-stats">
-                        <div><strong>120+</strong><span>páginas publicadas</span></div>
-                        <div><strong>7 días</strong><span>de entrega</span></div>
-                        <div><strong>4,9/5</strong><span>valoración</span></div>
+                        <div><strong>4 días</strong><span>de entrega garantizada</span></div>
+                        <div><strong>100%</strong><span>adaptada a celular</span></div>
+                        <div><strong>1 pago</strong><span>sin mensualidades ocultas</span></div>
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@ function e($texto): string
                         <span class="badge__icon">
                             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.6 2.6L16 9.4"/></svg>
                         </span>
-                        Lista en 7 días
+                        Lista en 4 días
                     </span>
                 </div>
 
@@ -176,20 +176,20 @@ function e($texto): string
                     <article class="card reveal">
                         <span class="circle circle--blue">1</span>
                         <h3>Nos cuentas de tu negocio</h3>
-                        <p>Hablamos un rato y nos cuentas qué haces, a quién ayudas y qué quieres conseguir.</p>
+                        <p>Hablamos por WhatsApp sobre qué haces, elegimos el nombre de tu dominio y definimos el objetivo de tu página.</p>
                         <span class="tag">Día 1</span>
                     </article>
                     <article class="card reveal">
                         <span class="circle circle--coral">2</span>
-                        <h3>Recibes tu diseño</h3>
-                        <p>Te enviamos tu página maquetada con los textos, colores e imágenes listos para revisar.</p>
-                        <span class="tag">Día 3</span>
+                        <h3>Revisas tu borrador en vivo</h3>
+                        <p>Te enviamos un enlace privado con tu página funcionando para que la pruebes en tu celular y nos pidas los ajustes que necesites.</p>
+                        <span class="tag">Día 2</span>
                     </article>
                     <article class="card reveal">
                         <span class="circle circle--mint">3</span>
                         <h3>La publicamos por ti</h3>
-                        <p>Conectamos tu dominio, revisamos juntos y la dejamos en línea para tus clientes.</p>
-                        <span class="tag">Día 7</span>
+                        <p>Conectamos tu dominio propio, revisamos los últimos detalles juntos y la dejamos en línea lista para recibir clientes.</p>
+                        <span class="tag">Día 4</span>
                     </article>
                 </div>
             </div>
