@@ -1,6 +1,6 @@
 <?php
 /**
- * index.php  ·  One Page (Light Mode editorial)
+ * index.php  ·  Landing de una sola página (minimalista · moderno)
  * ---------------------------------------------------------------------
  * Edita únicamente el bloque "CONFIGURACIÓN". El resto es estructura.
  * Todos los CTA abren WhatsApp con el mensaje codificado.
@@ -13,8 +13,8 @@ $nombre_marca     = 'nexo';
 $whatsapp_numero  = '34600000000';                       // Internacional, sin "+" ni espacios.
 $whatsapp_mensaje = 'Hola, quiero mi página web.';       // Mensaje predeterminado.
 $precio_servicio  = '$290';                              // Precio mostrado.
-$correo_contacto  = 'hola@tumarca.com';
-$instagram_url    = 'https://instagram.com/tumarca';
+$correo_contacto  = 'hola@nexo.com';
+$instagram_url    = 'https://instagram.com/nexo';
 
 // --- Valores derivados (no tocar) -------------------------------------
 $wa   = 'https://wa.me/' . $whatsapp_numero . '?text=' . rawurlencode($whatsapp_mensaje);
@@ -33,15 +33,15 @@ function e($texto): string
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title><?= e($nombre_marca) ?> · Tu negocio, claro y completo en una sola página</title>
-    <meta name="description" content="Diseño páginas web profesionales para negocios: claras, rápidas y listas en 7 días. Precio único y sin mensualidades.">
+    <meta name="description" content="Diseñamos, escribimos y publicamos tu sitio web de una sola página. Precio único, sin mensualidades y en línea en 7 días.">
 
     <!-- Favicon SVG embebido (solo la "x" bicolor del logo) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cg%20fill='none'%20stroke-width='9'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20stroke='%232a37f5'%20d='M12%208L52%2056'/%3E%3Cpath%20stroke='%23ff6b4a'%20d='M52%208L12%2056'/%3E%3C/g%3E%3C/svg%3E">
 
-    <!-- Google Fonts: Plus Jakarta Sans (400, 600, 700, 800) -->
+    <!-- Tipografías: Bricolage Grotesque (títulos) + DM Sans (cuerpo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -50,8 +50,8 @@ function e($texto): string
     <!-- ========================= 1. NAVBAR ========================= -->
     <header class="navbar">
         <div class="container navbar__inner">
-            <a href="#" class="logo" aria-label="nexo">
-                <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 348 112" role="img" aria-label="nexo">
+            <a href="#" class="logo" aria-label="<?= e($nombre_marca) ?>">
+                <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 348 112" role="img" aria-label="<?= e($nombre_marca) ?>">
                     <g fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
                         <g stroke="#0f131a">
                             <path d="M8 8V64"/>
@@ -83,23 +83,30 @@ function e($texto): string
         <!-- ========================== 2. HERO ========================== -->
         <section class="hero">
             <div class="container hero__inner">
+
                 <div class="hero__copy reveal">
-                    <span class="pill">Cupos abiertos para este mes</span>
+                    <span class="pill">Cupos abiertos para diciembre</span>
 
                     <h1 class="display">Tu negocio, claro y completo en una sola página.</h1>
 
                     <p class="lead">
-                        Diseño páginas web que explican lo que haces y convierten visitas
-                        en clientes. Sin complicaciones técnicas y sin mensualidades.
+                        Diseñamos, escribimos y publicamos tu sitio web. Tú solo nos cuentas
+                        qué haces; en 7 días está en línea.
                     </p>
 
                     <div class="hero__actions">
                         <a class="btn btn--solid" href="<?= e($wa) ?>" target="_blank" rel="noopener">Pedir mi página</a>
                         <a class="btn btn--ghost" href="#trabajos">Ver trabajos</a>
                     </div>
+
+                    <div class="hero-stats">
+                        <div><strong>120+</strong><span>páginas publicadas</span></div>
+                        <div><strong>7 días</strong><span>de entrega</span></div>
+                        <div><strong>4,9/5</strong><span>valoración</span></div>
+                    </div>
                 </div>
 
-                <div class="hero__visual reveal" aria-hidden="true">
+                <div class="hero__visual" aria-hidden="true">
                     <div class="browser">
                         <div class="browser__bar">
                             <span class="dot"></span>
@@ -107,9 +114,10 @@ function e($texto): string
                             <span class="dot"></span>
                             <span class="browser__url">tunegocio.com</span>
                         </div>
+
                         <div class="browser__body">
 
-                            <!-- Mini-navbar del sitio -->
+                            <!-- Mini-navbar -->
                             <div class="mini-nav">
                                 <span class="mini-nav__brand">Tu marca</span>
                                 <span class="mini-nav__links">
@@ -119,17 +127,17 @@ function e($texto): string
                                 </span>
                             </div>
 
-                            <!-- Mini-hero con texto real -->
+                            <!-- Mini-hero -->
                             <div class="mini-hero">
                                 <p class="mini-hero__title">Hacemos fácil<br>lo que haces mejor</p>
                                 <p class="mini-hero__sub">Un mensaje claro, tus servicios y un botón para que te contacten.</p>
                                 <span class="mini-hero__btn">Escríbenos</span>
                             </div>
 
-                            <!-- Bloque visual degradado -->
+                            <!-- Imagen con degradado -->
                             <div class="mini-gradient"></div>
 
-                            <!-- Fila inferior de 3 tarjetas -->
+                            <!-- Tres tarjetas -->
                             <div class="mini-grid">
                                 <span class="mini-card"></span>
                                 <span class="mini-card"></span>
@@ -152,26 +160,7 @@ function e($texto): string
                         Lista en 7 días
                     </span>
                 </div>
-            </div>
-        </section>
 
-        <!-- ======== 2b. MÉTRICAS RÁPIDAS (debajo del Hero) ======== -->
-        <section class="metrics-strip" aria-label="Datos rápidos">
-            <div class="container">
-                <ul class="metrics">
-                    <li>
-                        <strong>120+</strong>
-                        <span>páginas publicadas</span>
-                    </li>
-                    <li>
-                        <strong>7 días</strong>
-                        <span>de entrega</span>
-                    </li>
-                    <li>
-                        <strong>4,9/5</strong>
-                        <span>valoración de clientes</span>
-                    </li>
-                </ul>
             </div>
         </section>
 
@@ -181,41 +170,40 @@ function e($texto): string
                 <div class="section__head reveal">
                     <span class="eyebrow">Proceso</span>
                     <h2 class="section__title">De la idea a tu página en tres pasos.</h2>
-                    <p class="lead">Un proceso simple y transparente: tú cuentas, yo construyo, tú apruebas.</p>
                 </div>
 
-                <div class="cards steps">
+                <div class="grid grid--3">
                     <article class="card reveal">
                         <span class="circle circle--blue">1</span>
-                        <h3>Hablamos</h3>
-                        <p>Me cuentas qué hace tu negocio y qué quieres lograr. Te hago las preguntas clave.</p>
+                        <h3>Nos cuentas de tu negocio</h3>
+                        <p>Hablamos un rato y nos cuentas qué haces, a quién ayudas y qué quieres conseguir.</p>
                         <span class="tag">Día 1</span>
                     </article>
                     <article class="card reveal">
                         <span class="circle circle--coral">2</span>
-                        <h3>Diseño</h3>
-                        <p>Construyo tu página a medida y te la muestro para ajustar textos, colores y detalles.</p>
+                        <h3>Recibes tu diseño</h3>
+                        <p>Te enviamos tu página maquetada con los textos, colores e imágenes listos para revisar.</p>
                         <span class="tag">Día 3</span>
                     </article>
                     <article class="card reveal">
-                        <span class="circle circle--green">3</span>
-                        <h3>Publicamos</h3>
-                        <p>La dejamos en línea con tu dominio y te enseño a atender a los nuevos clientes.</p>
+                        <span class="circle circle--mint">3</span>
+                        <h3>La publicamos por ti</h3>
+                        <p>Conectamos tu dominio, revisamos juntos y la dejamos en línea para tus clientes.</p>
                         <span class="tag">Día 7</span>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ======== 4. TRABAJOS ======== -->
-        <section id="trabajos" class="section">
+        <!-- ======== 4. TRABAJOS (fondo oscuro) ======== -->
+        <section id="trabajos" class="section section--dark">
             <div class="container">
                 <div class="section__head reveal">
-                    <span class="eyebrow">Trabajos</span>
+                    <span class="eyebrow eyebrow--dark">Trabajos</span>
                     <h2 class="section__title">Cada página tiene la voz de su negocio.</h2>
                 </div>
 
-                <div class="cards works">
+                <div class="grid grid--3">
                     <article class="work reveal">
                         <div class="work__top work__top--forest" aria-hidden="true">
                             <span class="wire wire--light"></span>
@@ -223,7 +211,7 @@ function e($texto): string
                             <span class="wire wire--light wire--lg"></span>
                         </div>
                         <div class="work__foot">
-                            <h3>Café Montaña</h3>
+                            <h3>Café Altura</h3>
                             <p>Cafetería · Boquete</p>
                         </div>
                     </article>
@@ -234,8 +222,8 @@ function e($texto): string
                             <span class="wire wire--light wire--lg"></span>
                         </div>
                         <div class="work__foot">
-                            <h3>Estudio Aurora</h3>
-                            <p>Arquitectura · Ciudad de Panamá</p>
+                            <h3>Estudio Brasa</h3>
+                            <p>Diseño de interiores · Panamá</p>
                         </div>
                     </article>
                     <article class="work reveal">
@@ -245,15 +233,15 @@ function e($texto): string
                             <span class="wire wire--light wire--lg"></span>
                         </div>
                         <div class="work__foot">
-                            <h3>Clínica Vital</h3>
-                            <p>Salud · David</p>
+                            <h3>Clínica Sonríe</h3>
+                            <p>Odontología · David</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ======== 5. QUÉ INCLUYE ======== -->
+        <!-- ======== 5. QUÉ INCLUYE (fondo lavanda) ======== -->
         <section id="que-incluye" class="section section--alt">
             <div class="container">
                 <div class="section__head reveal">
@@ -261,7 +249,7 @@ function e($texto): string
                     <h2 class="section__title">Todo lo que una página profesional necesita.</h2>
                 </div>
 
-                <div class="cards features">
+                <div class="grid grid--3">
                     <article class="feature reveal">
                         <span class="icon-box icon-box--1">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -274,7 +262,7 @@ function e($texto): string
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </span>
                         <h3>Textos redactados</h3>
-                        <p>Escribo los textos contigo para que conecten con tus clientes.</p>
+                        <p>Escribimos los textos contigo para que conecten con tus clientes.</p>
                     </article>
                     <article class="feature reveal">
                         <span class="icon-box icon-box--3">
@@ -308,29 +296,41 @@ function e($texto): string
             </div>
         </section>
 
-        <!-- ======== 6. PRECIO ======== -->
-        <section id="precio" class="section">
+        <!-- ======== 6. TESTIMONIO ======== -->
+        <section class="section">
+            <div class="container">
+                <figure class="testimonial reveal">
+                    <span class="testimonial__avatar" aria-hidden="true">M</span>
+                    <blockquote class="testimonial__quote">
+                        «En una semana pasamos de no tener nada a recibir clientes por WhatsApp.
+                        El proceso fue clarísimo y sin tecnicismos.»
+                    </blockquote>
+                    <figcaption class="testimonial__name">Marta Rueda — Floristería Lirio</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ======== 7. PRECIO (fondo lavanda) ======== -->
+        <section id="precio" class="section section--alt">
             <div class="container price">
                 <div class="price__copy reveal">
                     <span class="eyebrow">Precio</span>
                     <h2 class="section__title">Un precio claro, sin mensualidades.</h2>
                     <p class="lead">
-                        Pagas una vez y tu página es tuya. Sin cuotas escondidas ni
-                        costes sorpresa: hablemos y te digo exactamente qué incluye.
+                        Pagas una vez y tu página es tuya. Sin cuotas escondidas ni costes
+                        sorpresa: te decimos exactamente qué incluye antes de empezar.
                     </p>
                 </div>
 
                 <aside class="price-card reveal">
                     <span class="price-card__tag">Página completa</span>
-                    <p class="price-card__amount">
-                        <?= e($precio_servicio) ?> <span>pago único</span>
-                    </p>
+                    <p class="price-card__amount"><?= e($precio_servicio) ?> <span>pago único</span></p>
 
                     <ul class="check-list">
-                        <li>Diseño a medida y responsive</li>
-                        <li>Textos redactados contigo</li>
-                        <li>Botones de contacto directo</li>
-                        <li>Dominio y alojamiento listos</li>
+                        <li>Diseño y textos incluidos</li>
+                        <li>Dominio por 1 año</li>
+                        <li>Una ronda de cambios</li>
+                        <li>Entrega en 7 días</li>
                     </ul>
 
                     <a class="btn btn--solid btn--block" href="<?= e($wa) ?>" target="_blank" rel="noopener">Pedir mi página</a>
@@ -338,8 +338,8 @@ function e($texto): string
             </div>
         </section>
 
-        <!-- ======== 7. PREGUNTAS ======== -->
-        <section id="preguntas" class="section section--alt">
+        <!-- ======== 8. PREGUNTAS ======== -->
+        <section id="preguntas" class="section">
             <div class="container">
                 <div class="section__head reveal">
                     <span class="eyebrow">Preguntas</span>
@@ -373,7 +373,7 @@ function e($texto): string
                             <span class="faq__icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq__a"><div>
-                            <p>Sí. Te entrego todo y te explico cómo hacer cambios básicos. Si prefieres que me encargue yo, puedo encargarme del mantenimiento.</p>
+                            <p>Sí. Te entregamos todo y te explicamos cómo hacer cambios básicos. Si prefieres que nos encarguemos nosotros, también ofrecemos mantenimiento.</p>
                         </div></div>
                     </div>
 
@@ -383,19 +383,19 @@ function e($texto): string
                             <span class="faq__icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq__a"><div>
-                            <p>Nada. Tú me cuentas tu negocio y yo me encargo de todo lo técnico y visual, de principio a fin.</p>
+                            <p>Nada. Tú nos cuentas tu negocio y nosotros nos encargamos de todo lo técnico y visual, de principio a fin.</p>
                         </div></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ======== 8a. BANNER CTA FINAL ======== -->
+        <!-- ======== 9. CIERRE (CTA final) ======== -->
         <section class="section">
             <div class="container">
-                <div class="cta-banner reveal">
+                <div class="cta reveal">
                     <h2>Tu página puede estar en línea la próxima semana.</h2>
-                    <p>Quedan pocos cupos este mes. Escríbeme y empecemos hoy mismo.</p>
+                    <p>Quedan pocos cupos este mes. Escríbenos y empecemos hoy mismo.</p>
                     <a class="btn btn--white" href="<?= e($wa) ?>" target="_blank" rel="noopener">Pedir mi página</a>
                 </div>
             </div>
@@ -403,29 +403,29 @@ function e($texto): string
 
     </main>
 
-    <!-- ======== 8b. FOOTER ======== -->
+    <!-- ======== 10. FOOTER (fondo oscuro) ======== -->
     <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__brand">
-                <span class="logo" aria-label="nexo">
-                    <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 348 112" role="img" aria-label="nexo">
+                <span class="logo" aria-label="<?= e($nombre_marca) ?>">
+                    <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 348 112" role="img" aria-label="<?= e($nombre_marca) ?>">
                         <g fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-                            <g stroke="#0f131a">
+                            <g stroke="#ffffff">
                                 <path d="M8 8V64"/>
                                 <path d="M8 30A22 22 0 0 1 52 30V64"/>
                             </g>
-                            <path stroke="#0f131a" d="M80 36H136A28 28 0 1 0 127.8 55.8"/>
+                            <path stroke="#ffffff" d="M80 36H136A28 28 0 1 0 127.8 55.8"/>
                             <path stroke="#2a37f5" d="M164 8L216 64"/>
                             <path stroke="#ff6b4a" d="M216 8L164 64"/>
-                            <circle stroke="#0f131a" cx="272" cy="36" r="28"/>
+                            <circle stroke="#ffffff" cx="272" cy="36" r="28"/>
                         </g>
                     </svg>
                 </span>
-                <p>Diseño páginas web claras y profesionales para negocios que quieren crecer en internet.</p>
+                <p>Diseñamos sitios web claros y profesionales para negocios que quieren crecer en internet.</p>
             </div>
 
             <nav class="footer__nav" aria-label="Enlaces del pie">
-                <h4>Navegación</h4>
+                <h4>Navegar</h4>
                 <a href="#proceso">Proceso</a>
                 <a href="#trabajos">Trabajos</a>
                 <a href="#precio">Precio</a>
