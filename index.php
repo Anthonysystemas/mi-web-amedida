@@ -12,7 +12,7 @@
 $nombre_marca     = 'nexo';
 $whatsapp_numero  = '34600000000';                       // Internacional, sin "+" ni espacios.
 $whatsapp_mensaje = 'Hola, quiero mi página web.';       // Mensaje predeterminado.
-$precio_servicio  = '$290';                              // Precio mostrado.
+$precio_servicio  = 'S/ 220';                            // Precio mostrado.
 $correo_contacto  = 'hola@nexo.com';
 $instagram_url    = 'https://instagram.com/nexo';
 
@@ -85,7 +85,7 @@ function e($texto): string
             <div class="container hero__inner">
 
                 <div class="hero__copy reveal">
-                    <span class="pill">Cupos abiertos para diciembre</span>
+                    <span class="pill">Diseño web One Page · Pago único</span>
 
                     <h1 class="display">Tu negocio, claro y completo en una sola página.</h1>
 
@@ -264,7 +264,7 @@ function e($texto): string
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </span>
                         <h3>Textos redactados</h3>
-                        <p>Escribimos los textos contigo para que conecten con tus clientes.</p>
+                        <p>Escribimos los textos contigo para que conecten con tus clientes</p>
                     </article>
                     <article class="feature reveal">
                         <span class="icon-box icon-box--3">
@@ -277,38 +277,24 @@ function e($texto): string
                         <span class="icon-box icon-box--4">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </span>
-                        <h3>Contacto directo</h3>
-                        <p>Botones de WhatsApp y correo para que te escriban al instante.</p>
+                        <h3>Botón directo a WhatsApp</h3>
+                        <p>Configurado con mensaje listo para que te escriban en un clic.</p>
                     </article>
                     <article class="feature reveal">
                         <span class="icon-box icon-box--5">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </span>
-                        <h3>Aparece en Google</h3>
-                        <p>Estructura y velocidad optimizadas para que te encuentren.</p>
+                        <h3>SEO técnico inicial</h3>
+                        <p>Estructura, etiquetas y velocidad optimizadas para aparecer en Google.</p>
                     </article>
                     <article class="feature reveal">
                         <span class="icon-box icon-box--6">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </span>
-                        <h3>Dominio y alojamiento</h3>
-                        <p>Lo dejamos funcionando en tu propio dominio, sin que te preocupes.</p>
+                        <h3>Seguridad HTTPS y dominio</h3>
+                        <p>Certificado SSL activo (candado seguro) y conexión con tu dominio.</p>
                     </article>
                 </div>
-            </div>
-        </section>
-
-        <!-- ======== 6. TESTIMONIO ======== -->
-        <section class="section">
-            <div class="container">
-                <figure class="testimonial reveal">
-                    <span class="testimonial__avatar" aria-hidden="true">M</span>
-                    <blockquote class="testimonial__quote">
-                        «En una semana pasamos de no tener nada a recibir clientes por WhatsApp.
-                        El proceso fue clarísimo y sin tecnicismos.»
-                    </blockquote>
-                    <figcaption class="testimonial__name">Marta Rueda — Floristería Lirio</figcaption>
-                </figure>
             </div>
         </section>
 
@@ -319,23 +305,28 @@ function e($texto): string
                     <span class="eyebrow">Precio</span>
                     <h2 class="section__title">Un precio claro, sin mensualidades.</h2>
                     <p class="lead">
-                        Pagas una vez y tu página es tuya. Sin cuotas escondidas ni costes
-                        sorpresa: te decimos exactamente qué incluye antes de empezar.
+                        Pagas una sola vez por el diseño y desarrollo de tu web. Sin cuotas
+                        escondidas ni costos sorpresa: cotizamos tu dominio aparte según la
+                        extensión que elijas.
                     </p>
                 </div>
 
                 <aside class="price-card reveal">
-                    <span class="price-card__tag">Página completa</span>
+                    <span class="price-card__tag">One Page Completa</span>
                     <p class="price-card__amount"><?= e($precio_servicio) ?> <span>pago único</span></p>
 
                     <ul class="check-list">
-                        <li>Diseño y textos incluidos</li>
-                        <li>Dominio por 1 año</li>
-                        <li>Una ronda de cambios</li>
-                        <li>Entrega en 7 días</li>
+                        <li>Diseño a medida, textos y adaptación a celular</li>
+                        <li>SEO técnico inicial, certificado HTTPS y botón WhatsApp</li>
+                        <li>Ronda de ajustes incluida en tu borrador en vivo</li>
+                        <li>Entrega lista en 4 días</li>
                     </ul>
 
                     <a class="btn btn--solid btn--block" href="<?= e($wa) ?>" target="_blank" rel="noopener">Pedir mi página</a>
+
+                    <p class="price-card__note" style="font-size:0.8rem;color:#64748b;margin-top:0.75rem;text-align:center;">
+                        + Dominio propio y alojamiento se pagan aparte de forma anual según el nombre que elijas (aprox. S/ 90/año como referencia).
+                    </p>
                 </aside>
             </div>
         </section>
@@ -365,7 +356,7 @@ function e($texto): string
                             <span class="faq__icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq__a"><div>
-                            <p>No. Es un pago único por el diseño y la publicación. Solo pagarías aparte el dominio y el alojamiento si decides gestionarlos tú.</p>
+                            <p>No. El diseño y desarrollo de tu página es un pago único fijo de S/ 220. Aparte solo cubres tu dominio propio y alojamiento de forma anual según la extensión que elijas (aprox. S/ 90/año como referencia, pudiendo variar si eliges un dominio especial). El mantenimiento anual o cambios futuros son opcionales.</p>
                         </div></div>
                     </div>
 
@@ -375,7 +366,7 @@ function e($texto): string
                             <span class="faq__icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq__a"><div>
-                            <p>Sí. Te entregamos todo y te explicamos cómo hacer cambios básicos. Si prefieres que nos encarguemos nosotros, también ofrecemos mantenimiento.</p>
+                            <p>Sí. Durante la entrega incluimos una ronda de ajustes en tu borrador en vivo. Luego, si necesitas actualizar precios, fotos o datos más adelante, puedes contratar nuestro mantenimiento anual opcional (desde S/ 30/año) o pedir cambios puntuales solo cuando los necesites.</p>
                         </div></div>
                     </div>
 
@@ -397,7 +388,7 @@ function e($texto): string
             <div class="container">
                 <div class="cta reveal">
                     <h2>Tu página puede estar en línea la próxima semana.</h2>
-                    <p>Quedan pocos cupos este mes. Escríbenos y empecemos hoy mismo.</p>
+                    <p>Escríbenos y empecemos hoy mismo, sin compromiso.</p>
                     <a class="btn btn--white" href="<?= e($wa) ?>" target="_blank" rel="noopener">Pedir mi página</a>
                 </div>
             </div>

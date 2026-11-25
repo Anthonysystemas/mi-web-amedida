@@ -243,6 +243,9 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 /* ---------- 6. SECCIONES ---------- */
 .section { padding-block: var(--section-y); }
 .section--alt  { background: var(--bg-alt); }
+/* Dos secciones lavanda contiguas (p. ej. "Qué incluye" y "Precio"):
+   una sola separación en lugar de dos paddings acumulados */
+.section--alt + .section--alt { padding-top: 0; }
 .section--dark { background: var(--dark); color: #FFFFFF; }
 .section--dark .section__title { color: #FFFFFF; }
 
@@ -591,38 +594,6 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .icon-box--4 { background: #e8f0ff; color: #2563eb; }
 .icon-box--5 { background: #fff6e0; color: #b8860b; }
 .icon-box--6 { background: #f1e8ff; color: var(--violet); }
-
-/* ---------- 11. TESTIMONIO ---------- */
-.testimonial {
-    max-width: 760px;
-    margin-inline: auto;
-    text-align: center;
-}
-.testimonial__avatar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 62px; height: 62px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--violet));
-    color: #FFFFFF;
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 1.5rem;
-}
-.testimonial__quote {
-    margin: 1.5rem 0 1.25rem;
-    font-family: var(--font-head);
-    font-size: clamp(1.4rem, 3.4vw, 2.1rem);
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -0.02em;
-}
-.testimonial__name {
-    color: var(--muted);
-    font-size: .95rem;
-    font-weight: 700;
-}
 
 /* ---------- 12. PRECIO ---------- */
 .price {
