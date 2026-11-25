@@ -199,44 +199,46 @@ function e($texto): string
         <section id="trabajos" class="section section--dark">
             <div class="container">
                 <div class="section__head reveal">
-                    <span class="eyebrow eyebrow--dark">Trabajos</span>
-                    <h2 class="section__title">Cada página tiene la voz de su negocio.</h2>
+                    <span class="eyebrow eyebrow--dark">Proyectos y demos</span>
+                    <h2 class="section__title">Así se verá tu negocio en internet.</h2>
                 </div>
 
                 <div class="grid grid--3">
-                    <article class="work reveal">
-                        <div class="work__top work__top--forest" aria-hidden="true">
-                            <span class="wire wire--light"></span>
-                            <span class="wire wire--light wire--sm"></span>
-                            <span class="wire wire--light wire--lg"></span>
+                    <a class="work reveal"
+                       href="https://cotizador.maskelperu.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        <div class="work__media">
+                            <img src="assets/img/proyectos/maskel.png" alt="Vista previa web Maskel Perú" loading="lazy">
                         </div>
                         <div class="work__foot">
-                            <h3>Café Altura</h3>
-                            <p>Cafetería · Boquete</p>
+                            <h3>Maskel Perú</h3>
+                            <p>Cotizador web y catálogo · En desarrollo (Lima)</p>
                         </div>
-                    </article>
-                    <article class="work reveal">
-                        <div class="work__top work__top--terra" aria-hidden="true">
-                            <span class="wire wire--light"></span>
-                            <span class="wire wire--light wire--sm"></span>
-                            <span class="wire wire--light wire--lg"></span>
-                        </div>
-                        <div class="work__foot">
-                            <h3>Estudio Brasa</h3>
-                            <p>Diseño de interiores · Panamá</p>
-                        </div>
-                    </article>
-                    <article class="work reveal">
-                        <div class="work__top work__top--blue" aria-hidden="true">
-                            <span class="wire wire--light"></span>
-                            <span class="wire wire--light wire--sm"></span>
-                            <span class="wire wire--light wire--lg"></span>
+                    </a>
+
+                    <a class="work reveal"
+                       href="demos/clinica-sonrie.html"
+                       target="_blank" rel="noopener noreferrer">
+                        <div class="work__media">
+                            <img src="assets/img/demo-clinica.png" alt="Demo web Clínica Dental Sonríe" loading="lazy">
                         </div>
                         <div class="work__foot">
-                            <h3>Clínica Sonríe</h3>
-                            <p>Odontología · David</p>
+                            <h3>Clínica Dental Sonríe</h3>
+                            <p>Modelo demostración · Salud</p>
                         </div>
-                    </article>
+                    </a>
+
+                    <a class="work reveal"
+                       href="demos/estudio-norte.html"
+                       target="_blank" rel="noopener noreferrer">
+                        <div class="work__media">
+                            <img src="assets/img/demo-estudio.png" alt="Demo web Estudio Contable Norte" loading="lazy">
+                        </div>
+                        <div class="work__foot">
+                            <h3>Estudio Contable Norte</h3>
+                            <p>Modelo demostración · Servicios</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

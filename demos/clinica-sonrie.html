@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Dental Sonríe · Modelo de demostración por nexo</title>
+<meta name="description" content="Modelo de demostración de una web para clínica dental, desarrollado por nexo.">
+<style>
+    /* ===================== BASE ===================== */
+    :root{
+        --primary:#0284c7;
+        --primary-dark:#0369a1;
+        --ink:#0f172a;
+        --muted:#475569;
+        --bg:#f4f8fb;
+        --white:#ffffff;
+        --line:#e2e8f0;
+        --radius:16px;
+        --shadow:0 18px 40px rgba(2,132,199,.12);
+        --font:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+        margin:0;
+        font-family:var(--font);
+        color:var(--ink);
+        background:var(--bg);
+        line-height:1.6;
+        -webkit-font-smoothing:antialiased;
+    }
+    h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.02em;}
+    p{margin:0;}
+    a{color:inherit;}
+    img{max-width:100%;display:block;}
+    .container{width:100%;max-width:1120px;margin-inline:auto;padding-inline:24px;}
+
+    /* ===================== BARRA DEMO ===================== */
+    .demo-bar{
+        background:#0f172a;
+        color:#cbd5e1;
+        font-size:.82rem;
+        text-align:center;
+        padding:10px 16px;
+    }
+    .demo-bar strong{color:#fff;}
+    .demo-bar a{color:#7dd3fc;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(125,211,252,.5);}
+    .demo-bar a:hover{color:#fff;border-color:#fff;}
+
+    /* ===================== BOTONES ===================== */
+    .btn{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        gap:.5rem;
+        padding:14px 24px;
+        border-radius:12px;
+        font-weight:600;
+        font-size:1rem;
+        text-decoration:none;
+        border:1px solid transparent;
+        cursor:pointer;
+        transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease,border-color .2s ease;
+    }
+    .btn--primary{background:var(--primary);color:#fff;}
+    .btn--primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 14px 28px rgba(2,132,199,.3);}
+    .btn--outline{background:#fff;color:var(--ink);border-color:var(--line);}
+    .btn--outline:hover{border-color:var(--ink);transform:translateY(-2px);}
+    .btn--white{background:#fff;color:var(--primary);}
+    .btn--white:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(0,0,0,.18);}
+
+    /* ===================== HEADER ===================== */
+    .site-header{
+        position:sticky;
+        top:0;
+        z-index:40;
+        background:rgba(255,255,255,.86);
+        backdrop-filter:blur(12px);
+        -webkit-backdrop-filter:blur(12px);
+        border-bottom:1px solid var(--line);
+    }
+    .site-header__inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+    .brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;}
+    .brand__mark{
+        width:30px;height:30px;border-radius:9px;
+        background:var(--primary);color:#fff;
+        display:inline-flex;align-items:center;justify-content:center;
+        font-size:1rem;
+    }
+    .nav{display:flex;align-items:center;gap:28px;}
+    .nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;transition:color .2s ease;}
+    .nav a:hover{color:var(--ink);}
+    .header-cta{padding:11px 20px;font-size:.9rem;}
+
+    /* ===================== HERO ===================== */
+    .hero{padding:72px 0;position:relative;overflow:hidden;}
+    .hero::before{
+        content:"";position:absolute;top:-30%;right:-10%;
+        width:520px;height:520px;border-radius:50%;
+        background:radial-gradient(circle,rgba(2,132,199,.14),transparent 70%);
+        pointer-events:none;
+    }
+    .hero__inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+    .pill{
+        display:inline-block;padding:.42rem 1rem;border-radius:999px;
+        background:#e0f2fe;color:var(--primary-dark);
+        font-size:.8rem;font-weight:700;
+    }
+    .hero h1{margin:20px 0 18px;font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800;}
+    .hero p.lead{color:var(--muted);font-size:1.075rem;max-width:46ch;}
+    .hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
+
+    .summary{
+        background:#fff;border:1px solid var(--line);border-radius:20px;
+        padding:32px;box-shadow:var(--shadow);
+    }
+    .summary h3{font-size:1.3rem;}
+    .summary > span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px;}
+    .summary ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:14px;}
+    .summary li{position:relative;padding-left:34px;font-size:.95rem;}
+    .summary li::before{
+        content:"";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;
+        background:var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat;
+    }
+
+    /* ===================== SECCIONES ===================== */
+    .section{padding:80px 0;}
+    .section--white{background:#fff;}
+    .section__head{max-width:34ch;margin-bottom:44px;}
+    .eyebrow{display:inline-block;color:var(--primary);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem;}
+    .section__head h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:800;}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .card{
+        background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+        padding:30px;transition:transform .25s ease,box-shadow .25s ease;
+    }
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(2,132,199,.12);}
+    .card__icon{
+        width:48px;height:48px;border-radius:14px;background:#e0f2fe;color:var(--primary);
+        display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px;
+    }
+    .card h3{font-size:1.15rem;margin-bottom:.5rem;}
+    .card p{color:var(--muted);font-size:.95rem;}
+
+    /* ===================== CTA ===================== */
+    .cta-wrap{padding:24px 0 80px;}
+    .cta{
+        background:var(--primary);color:#fff;border-radius:24px;
+        padding:clamp(36px,6vw,60px);text-align:center;
+        box-shadow:0 30px 60px rgba(2,132,199,.3);
+    }
+    .cta h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;}
+    .cta p{color:rgba(255,255,255,.9);max-width:48ch;margin:14px auto 28px;}
+
+    /* ===================== FOOTER ===================== */
+    .footer{background:#fff;border-top:1px solid var(--line);padding:36px 0;text-align:center;}
+    .footer p{color:var(--muted);font-size:.9rem;}
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width:768px){
+        .nav{display:none;}
+        .hero{padding:52px 0;}
+        .hero__inner{grid-template-columns:1fr;gap:36px;}
+        .section{padding:56px 0;}
+        .cards{grid-template-columns:1fr;}
+        .cta-wrap{padding:8px 0 56px;}
+        .hero__actions .btn{width:100%;}
+    }
+</style>
+</head>
+<body>
+
+    <!-- Barra de demostración -->
+    <div class="demo-bar">
+        Modelo de demostración creado por <strong>nexo</strong> · <a href="../">Volver a nexo</a>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="#" class="brand"><span class="brand__mark">☺</span> Clínica Sonríe</a>
+            <nav class="nav" aria-label="Navegación">
+                <a href="#tratamientos">Tratamientos</a>
+                <a href="#horarios">Horarios</a>
+                <a class="btn btn--primary header-cta" href="https://wa.me/51999999999" target="_blank" rel="noopener">Agendar cita</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero__inner">
+                <div>
+                    <span class="pill">Atención de Lunes a Sábado · Lima</span>
+                    <h1>Cuida tu sonrisa sin dolor y con especialistas certificados.</h1>
+                    <p class="lead">
+                        Odontología preventiva, ortodoncia y estética en un solo lugar.
+                        Diagnósticos claros, tratamientos cómodos y un equipo que te explica
+                        cada paso antes de empezar.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="https://wa.me/51999999999" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+                        <a class="btn btn--outline" href="#tratamientos">Ver tratamientos</a>
+                    </div>
+                </div>
+
+                <aside class="summary">
+                    <h3>Evaluación Dental Completa</h3>
+                    <span>Todo lo que incluye tu primera visita</span>
+                    <ul>
+                        <li>Revisión clínica completa de dientes y encías</li>
+                        <li>Profilaxis ultrasónica para una limpieza profunda</li>
+                        <li>Atención puntual, sin largas esperas</li>
+                        <li>Pagos con Yape, Plin y tarjetas</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Tratamientos -->
+        <section id="tratamientos" class="section section--white">
+            <div class="container">
+                <div class="section__head">
+                    <span class="eyebrow">Tratamientos</span>
+                    <h2>Tu salud dental, paso a paso.</h2>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <span class="card__icon" aria-hidden="true">🦷</span>
+                        <h3>Limpieza y Prevención</h3>
+                        <p>Profilaxis, control de sarro y revisiones periódicas para mantener tu boca sana todo el año.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__icon" aria-hidden="true">😁</span>
+                        <h3>Ortodoncia Estética</h3>
+                        <p>Brackets y alineadores transparentes para corregir tu mordida con la menor molestia posible.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__icon" aria-hidden="true">✨</span>
+                        <h3>Blanqueamiento y Carillas</h3>
+                        <p>Recupera un tono uniforme y natural con blanqueamiento profesional y carillas a medida.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section id="horarios" class="cta-wrap">
+            <div class="container">
+                <div class="cta">
+                    <h2>Reserva tu cita hoy mismo.</h2>
+                    <p>Atendemos de lunes a sábado, de 9:00 a.m. a 8:00 p.m. Escríbenos por WhatsApp y te confirmamos el horario que mejor te venga.</p>
+                    <a class="btn btn--white" href="https://wa.me/51999999999" target="_blank" rel="noopener">Escribir al WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Clínica Dental Sonríe · Lima, Perú · Página de demostración desarrollada por nexo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
