@@ -220,7 +220,7 @@ function e($texto): string
                        href="demos/clinica-sonrie.html"
                        target="_blank" rel="noopener noreferrer">
                         <div class="work__media">
-                            <img src="assets/img/demo-clinica.png" alt="Demo web Clínica Dental Sonríe" loading="lazy">
+                            <img src="assets/img/proyectos/demo-clinica.png" alt="Demo web Clínica Dental Sonríe" loading="lazy">
                         </div>
                         <div class="work__foot">
                             <h3>Clínica Dental Sonríe</h3>
@@ -232,7 +232,7 @@ function e($texto): string
                        href="demos/estudio-norte.html"
                        target="_blank" rel="noopener noreferrer">
                         <div class="work__media">
-                            <img src="assets/img/demo-estudio.png" alt="Demo web Estudio Contable Norte" loading="lazy">
+                            <img src="assets/img/proyectos/demo-estudio.png" alt="Demo web Estudio Contable Norte" loading="lazy">
                         </div>
                         <div class="work__foot">
                             <h3>Estudio Contable Norte</h3>
